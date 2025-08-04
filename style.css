@@ -1,0 +1,186 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(90deg, #007BFF, #00C6FF);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: white;
+  margin: 1rem auto;
+  border-radius: 10px;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+section img {
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  animation: zoomIn 1.2s ease;
+}
+
+/* Lists in skills */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  background: #007BFF;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+#skills ul li:hover {
+  transform: scale(1.1);
+}
+
+/* Projects */
+.projects h3 {
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.projects p {
+  color: #666;
+}
+
+/* Contact section */
+#contacts p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  animation: slideUp 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+}
